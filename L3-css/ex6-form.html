@@ -1,0 +1,72 @@
+<html>
+  <head>
+    <style>
+      body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      form {
+        margin: 0 auto;
+        text-align: left;
+        width: 50%;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+      }
+
+      #email {
+        width:90%;
+      }
+
+      input {
+        padding: 10px;
+      }
+
+      span {
+        display: block;
+        padding: 10px;
+      }
+
+      button {
+        color: whitesmoke;
+        background-color: darkmagenta;
+        border-radius: 10px;
+        border-color: magenta;
+        width: 90%;
+        padding: 10px 3px;
+        cursor: pointer;
+        box-shadow: 2px 2px 5px 0px gray;
+      }
+
+    </style>
+  </head>
+  <body>
+    <form action='/test' method='POST'>
+      <p>
+        <label>E mail:</label>
+        <input type='email' id='email' name="email" placeholder="mail@example.com" required/>
+      </p>
+      <p>
+        <label>Helado:</label>
+        <span><input type="radio" name="helado" value="Napolitano">Napolitano</span>
+        <span><input type="radio" name="helado" value="Chocolate">Chocolate</span>
+        <span><input type="radio" name="helado" value="Limón">Limón</span>
+      </p>
+      <p>
+        <label>Toppings:</label>
+        <span><input type="checkbox" name="envase" value="chispas">Chispas</span>
+        <span><input type="checkbox" name="envase" value="jarabe">Jarabe</span>
+        <span><input type="checkbox" name="envase" value="chamoy">Chamoy</span>
+      </p>
+      <p>
+        <input type="file" name="archivo">
+      </p>
+      <p>
+        <button type="submit">Ordenar</button>
+      </p>
+    </form>
+  </body>
+</html>
