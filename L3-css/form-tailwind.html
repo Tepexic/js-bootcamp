@@ -1,38 +1,49 @@
 <html>
   <head>
     <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+      #boton {
+        background-color: chocolate;
+      }
+      span {
+        padding: 10px;
+      }
+    </style>
   </head>
   <body>
-    <form action='/test' method='POST' class="mx-auto text-left mt-10 w-1/2">
-      <p>
-        <label class="block mt-3 font-bold">E mail:</label>
-        <input type='email'
-          id='email'
-          name="email"
-          placeholder="mail@example.com"
-          required
-          class="w-full border border-gray-100 p-2 mb-3"/>
-      </p>
-      <p>
-        <label class="block mt-3 font-bold">Helado:</label>
-        <span class="block p-1"><input type="radio" name="helado" value="Napolitano">Napolitano</span>
-        <span class="block p-1"><input type="radio" name="helado" value="Chocolate">Chocolate</span>
-        <span class="block p-1"><input type="radio" name="helado" value="Limón">Limón</span>
-      </p>
-      <p>
-        <label class="block mt-3 font-bold">Toppings:</label>
-        <span class="block p-1"><input class="p-1" type="checkbox" name="envase" value="jarabe">Jarabe</span>
-        <span class="block p-1"><input class="p-1" type="checkbox" name="envase" value="chispas">Chispas</span>
-        <span class="block p-1"><input class="p-1" type="checkbox" name="envase" value="chamoy">Chamoy</span>
-      </p>
-      <p>
-        <input type="file" name="archivo">
-      </p>
-      <p>
-        <button
-        class="w-full mt-5 p-2 pr-5 pl-5 bg-green-700 text-white rounded-lg"
-        type="submit">Ordenar</button>
-      </p>
-    </form>
+    <div class="w-2/3 bg-blue-500">
+      <form action='/test' method='POST' class="mx-auto text-left mt-10 w-1/2">
+        <div>
+          <label class="block mt-3 font-bold">E mail:</label>
+          <input type='email'
+            id='email'
+            name="email"
+            placeholder="mail@example.com"
+            required
+            class="w-full border border-gray-100 p-2 mb-3"/>
+        </div>
+        <div>
+          <div class="block mt-3 font-bold">Helado:</div>
+          <div class="block p-1"><input type="radio" name="helado" value="Napolitano">Napolitano</div>
+          <div class="block p-1"><input type="radio" name="helado" value="Chocolate">Chocolate</div>
+          <div class="block p-1"><input type="radio" name="helado" value="Limón">Limón</div>
+        </div>
+        <div>
+          <label class="block mt-3 font-bold">Toppings:</label>
+          <input class="p-2" type="checkbox" name="envase" value="jarabe"><span class="">Jarabe</span>
+          <span class="block"><input class="p-1" type="checkbox" name="envase" value="chispas">Chispas</span>
+          <span class="block"><input class="p-1" type="checkbox" name="envase" value="chamoy">Chamoy</span>
+        </div>
+        <div>
+          <input type="file" name="archivo">
+        </div>
+        <div>
+          <button
+          id="boton"
+          class="w-full mt-5 p-2 pr-5 pl-5 bg-green-700 text-white rounded-lg"
+          type="submit">Ordenar</button>
+        </div>
+      </form>
+    </div>
   </body>
 </html>
